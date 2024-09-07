@@ -1,0 +1,73 @@
+*******************************************************index.html*********************************************************************
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"> <img src="logo.jpg" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="converter.html">Converter</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to the Temperature Converter</h1>
+        <p>Convert temperatures between Celsius, Fahrenheit, and Kelvin easily.</p>
+        <a href="converter.html" class="btn">Try the Converter</a>
+    </section>
+
+    <section class="converter">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="tempInput" placeholder="Enter temperature" />
+        <select id="tempUnit">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+        <button class="convert-btn" onclick="convertTemp()">Convert</button>
+
+        <div class="result" id="result"></div>
+    </section>
+
+    <section class="about">
+        <h1>About Our Temperature Converter</h1>
+        <p>This website helps users convert temperatures between Celsius, Fahrenheit, and Kelvin quickly and easily.</p>
+    </section>
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="mobile no" placeholder="Your Phone no" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button id="btn" type="submit"> Send Message</button>
+        </form>
+    </section>
+
+    <section class="footer-section">
+
+        <footer>
+            <p>&copy; 2024 Temperature Converter</p>
+        </footer>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
