@@ -17,11 +17,13 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 15px;
 }
 
 nav ul li a {
@@ -31,26 +33,28 @@ nav ul li a {
 
 .navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
 .hero {
     background-color: #02243a;
     color: white;
-    padding: 100px 20px;
+    padding: 60px 20px;
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .hero p {
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .btn {
-    font-size: 24px;
+    font-size: 18px;
+    padding: 10px 20px;
 }
 
 section {
@@ -61,13 +65,13 @@ footer {
     background-color: #333;
     color: white;
     padding: 5px 0;
-    position: fixed;
-    width: 100%;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
 
 .contact h1 {
-    font-size: 42px;
+    font-size: 36px;
 }
 
 .converter {
@@ -77,16 +81,17 @@ footer {
 }
 
 .converter h1 {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 input,
 select,
 textarea,
 button {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
+    box-sizing: border-box;
 }
 
 .button {
@@ -110,15 +115,96 @@ button {
     border-radius: 20px;
     background-color: #007acc;
     border: none;
-    margin-left: 10vh;
-    margin-right: 10vh;
     cursor: pointer;
+    padding: 10px 20px;
 }
 
 .about {
     background-color: rgba(213, 212, 210, 0.718);
+    padding: 40px 20px;
 }
 
 .contact {
     margin-bottom: 10vh;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .converter {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .converter h1 {
+        font-size: 26px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .converter h1 {
+        font-size: 24px;
+    }
+
+    input, select, textarea, button {
+        width: 100%;
+    }
+
+    .about, .contact {
+        padding: 20px 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
